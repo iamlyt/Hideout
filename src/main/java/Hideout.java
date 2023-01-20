@@ -15,15 +15,11 @@ public class Hideout<T> {
         }
     }
 
-//    // takes out the object with a type
-//    public T takeFromHideout() {
-//
-//        if (this.elements.isEmpty()) {
-//            return null;
-//        } else {
-//
-//        }
-//    }
+    // takes out the object with a type
+    public T takeFromHideout() {
+
+
+    }
 
     // returns true if there is an object in hideout
     // if no object, return false
