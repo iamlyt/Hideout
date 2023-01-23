@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Hideout<T> {
 
@@ -15,8 +16,28 @@ public class Hideout<T> {
         }
     }
 
-    // takes out the object with a type
+    // if nothing in hideout, return null
+    // returns object in hideout and removes object from hideout
     public T takeFromHideout() {
+
+        Iterator<T> iterator = elements.iterator();
+
+        while (iterator.hasNext()) {
+            // next() points to the next element
+            T next = iterator.next();
+            // remove next
+            iterator.remove();
+
+        }
+        return null;
+
+
+        // return iterator.next() --- prints out the object in hideout
+
+        // alternative:
+//        T value = elements.get(0);
+//        elements.clear();
+//        return value;
 
 
     }
@@ -28,5 +49,11 @@ public class Hideout<T> {
             return true;
         }
         return false;
+    }
+
+    public void printAll() {
+        for (T e : elements) {
+            System.out.println(e);
+        }
     }
 }
